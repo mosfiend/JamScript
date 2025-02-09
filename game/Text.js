@@ -1,12 +1,18 @@
 import * as PIXI from "pixi.js"
 export class TextZone extends PIXI.Container {
-    constructor(content) {
+    constructor(content = "PAWN") {
         super();
         this.box = new PIXI.Graphics()
             .beginFill(0x28262b)
             .drawRect(105, 230, 90, 30)
         this.zones = []
         this.content = "PAWN"
+        this.textArray = this.content.split("")
+        console.log(this.textArray)
+        this.curIdx= 0
+        this.curText = ""
+
+        // push words bit by bit
         this.text = new PIXI.Text(this.content, {
             fontFamily: 'VT323',
             fontSize: 45,
@@ -25,17 +31,17 @@ export class TextZone extends PIXI.Container {
         this.cursor.x = this.text.x
         this.cursor.y = this.text.y + this.text.height
         this.cursor.betwix = false
-   
+  this.ticker = 5 
         this.addChild(this.box, this.text);
 
     }
 
     update(deltaTime) {
+        if (ticker ===0) {
+this.curText += this.textArray[0]
+        }
     }
 
-    editorMode() {
-
-    }
 
     moveCursor(dir) {
         if (!this.cursor.betwix) {

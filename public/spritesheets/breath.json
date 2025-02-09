@@ -1,0 +1,23 @@
+{
+  "sprites": [
+    {
+      "fileName": "chainsaw-man_ (1).png",
+      "width": 53,
+      "height": 48,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "fileName": "chainsaw-man_ (2).png",
+      "width": 53,
+      "height": 49,
+      "x": 53,
+      "y": 0
+    }
+  ],
+  "packMode": "grid",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 106,
+  "spriteSheetHeight": 49
+}

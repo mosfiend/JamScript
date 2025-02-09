@@ -1,0 +1,51 @@
+{
+  "sprites": [
+    {
+      "fileName": "chainsaw-man run_ (1).png",
+      "width": 69,
+      "height": 50,
+      "x": 3,
+      "y": 1
+    },
+    {
+      "fileName": "chainsaw-man run_ (2).png",
+      "width": 65,
+      "height": 50,
+      "x": 81,
+      "y": 1
+    },
+    {
+      "fileName": "chainsaw-man run_ (3).png",
+      "width": 73,
+      "height": 51,
+      "x": 153,
+      "y": 1
+    },
+    {
+      "fileName": "chainsaw-man run_ (4).png",
+      "width": 65,
+      "height": 53,
+      "x": 5,
+      "y": 53
+    },
+    {
+      "fileName": "chainsaw-man run_ (5).png",
+      "width": 60,
+      "height": 49,
+      "x": 84,
+      "y": 55
+    },
+    {
+      "fileName": "chainsaw-man run_ (6).png",
+      "width": 76,
+      "height": 50,
+      "x": 152,
+      "y": 54
+    }
+  ],
+  "packMode": "grid",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 228,
+  "spriteSheetHeight": 106
+}

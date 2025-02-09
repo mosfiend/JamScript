@@ -1,28 +1,25 @@
-import * as PIXI from "pixi.js"
+import { AnimatedSprite, Assets, Container, Graphics } from 'pixi.js';
 import Matter from 'matter-js';
 import { Manager } from "../manager";
 import * as Filters from 'pixi-filters';
 
-export class Hero extends PIXI.Container {
-    constructor(x, y, keySet) {
+export class Hero extends Container {
+    constructor(keySet) {
         super();
         this.screenWidth = Manager.width;
         this.screenHeight = Manager.height;
-        this.keySet = keySet
+        this.keySet = keySet;
         // graphics
-        this.sprite = new PIXI.Graphics()
-            .beginFill(0x440044)
-            .drawRect(0, 0, 35, 35);
-        this.sprite.x = x
-        this.sprite.y = y
 
-        this.addChild(this.sprite);
-        // physics
+        this.initAnimation()
+        // Physics
+        console.log(this.sprite.width)
+        this.sprite.x = 250
         this.body = Matter.Bodies.rectangle(
-            this.sprite.x + this.sprite.width / 2,
-            this.sprite.y + this.sprite.height / 2,
-            this.sprite.width,
-            this.sprite.height,
+            this.sprite.x - 65 / 2,
+            this.sprite.y - 55 / 2,
+            65,
+            50,
             { friction: 0 });
         Matter.World.add(Manager.physics.world, this.body);
         this.body.gameHero = true; // why am i using this 
@@ -38,12 +35,12 @@ export class Hero extends PIXI.Container {
         const v = Matter.Body.getVelocity(this.body)
         this.dx = v.x
         this.dy = v.y
-        this.sprite.x = this.body.position.x - this.sprite.width / 2;
-        this.sprite.y = this.body.position.y - this.sprite.height / 2;
+        console.log(this.sprite.width, this.sprite.height)
+        this.sprite.x = this.body.position.x - 65 / 2;
+        this.sprite.y = this.body.position.y - 50 / 2;
 
         if (this.keySet.has("a") || this.keySet.has("ArrowLeft")) this.move(-1);
         if (this.keySet.has("d") || this.keySet.has("ArrowRight")) this.move(1);
-
     };
 
     startJump() {
@@ -55,6 +52,7 @@ export class Hero extends PIXI.Container {
 
         const v = Matter.Body.getVelocity(this.body)
         this.dy = v.y
+        this.changeAnimation("run")
     }
 
     land(e) {
@@ -62,7 +60,7 @@ export class Hero extends PIXI.Container {
         const hero = colliders.find(body => body.gameHero);
         const platform = colliders.find(body => body.ground);
  
-        if (hero && platform &&   platform.position.y >hero.position.y) {
+        if (hero && platform && platform.position.y >hero.position.y) {
             
             this.stayOnPlatform(platform.gamePlatform);
         }
@@ -83,8 +81,25 @@ export class Hero extends PIXI.Container {
         this.jumpIndex = 0;
     }
 
+    changeAnimation(animation) {
+        this.removeChild(this.sprite)
+        const animations = Assets.get(animation)?.animations;
+        this.sprite = new AnimatedSprite(animations[animation]);
+        this.sprite.play()
+        this.sprite.animationSpeed= 0.1
+        this.addChild(this.sprite)
 
+    }
 
+    initAnimation() {
+        const animations = Assets.get("intro")?.animations;
+        this.sprite = new AnimatedSprite(animations["intro"]);
+        this.sprite.play()
+        this.sprite.animationSpeed= 0.25
+        this.sprite.loop = false
+        this.addChild(this.sprite)
+
+    }
 
     handleEvent(key, keySet) {
         this.keySet = keySet

@@ -1,0 +1,135 @@
+{
+  "sprites": [
+    {
+      "fileName": "chainsaw-man intro_ (1).png",
+      "width": 24,
+      "height": 55,
+      "x": 14,
+      "y": 0
+    },
+    {
+      "fileName": "chainsaw-man intro_ (10).png",
+      "width": 48,
+      "height": 51,
+      "x": 55,
+      "y": 2
+    },
+    {
+      "fileName": "chainsaw-man intro_ (11).png",
+      "width": 48,
+      "height": 53,
+      "x": 108,
+      "y": 1
+    },
+    {
+      "fileName": "chainsaw-man intro_ (12).png",
+      "width": 48,
+      "height": 51,
+      "x": 161,
+      "y": 2
+    },
+    {
+      "fileName": "chainsaw-man intro_ (13).png",
+      "width": 47,
+      "height": 54,
+      "x": 215,
+      "y": 0
+    },
+    {
+      "fileName": "chainsaw-man intro_ (14).png",
+      "width": 53,
+      "height": 48,
+      "x": 0,
+      "y": 58
+    },
+    {
+      "fileName": "chainsaw-man intro_ (15).png",
+      "width": 53,
+      "height": 48,
+      "x": 53,
+      "y": 58
+    },
+    {
+      "fileName": "chainsaw-man intro_ (16).png",
+      "width": 53,
+      "height": 48,
+      "x": 106,
+      "y": 58
+    },
+    {
+      "fileName": "chainsaw-man intro_ (17).png",
+      "width": 53,
+      "height": 48,
+      "x": 159,
+      "y": 58
+    },
+    {
+      "fileName": "chainsaw-man intro_ (18).png",
+      "width": 53,
+      "height": 48,
+      "x": 212,
+      "y": 58
+    },
+    {
+      "fileName": "chainsaw-man intro_ (2).png",
+      "width": 32,
+      "height": 55,
+      "x": 10,
+      "y": 110
+    },
+    {
+      "fileName": "chainsaw-man intro_ (3).png",
+      "width": 29,
+      "height": 55,
+      "x": 65,
+      "y": 110
+    },
+    {
+      "fileName": "chainsaw-man intro_ (4).png",
+      "width": 24,
+      "height": 55,
+      "x": 120,
+      "y": 110
+    },
+    {
+      "fileName": "chainsaw-man intro_ (5).png",
+      "width": 29,
+      "height": 55,
+      "x": 171,
+      "y": 110
+    },
+    {
+      "fileName": "chainsaw-man intro_ (6).png",
+      "width": 32,
+      "height": 55,
+      "x": 222,
+      "y": 110
+    },
+    {
+      "fileName": "chainsaw-man intro_ (7).png",
+      "width": 24,
+      "height": 55,
+      "x": 14,
+      "y": 165
+    },
+    {
+      "fileName": "chainsaw-man intro_ (8).png",
+      "width": 43,
+      "height": 51,
+      "x": 58,
+      "y": 167
+    },
+    {
+      "fileName": "chainsaw-man intro_ (9).png",
+      "width": 48,
+      "height": 53,
+      "x": 108,
+      "y": 166
+    }
+  ],
+  "packMode": "grid",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 265,
+  "spriteSheetHeight": 220
+}

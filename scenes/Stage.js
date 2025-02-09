@@ -5,10 +5,9 @@ import { Background } from '../game/Background.js';
 import { Hero } from '../game/Hero.js';
 import { PlatBuffer } from '../game/Platforms.js';
 import { TrainWreck } from '../game/Collision.js';
-import { Crowd } from '../game/Crowd.js';
 import { TextZone } from '../game/Text.js';
 import * as Filters from 'pixi-filters';
-import { sound } from '@pixi/sound'
+import { Sound } from '@pixi/sound'
 export class Stage extends PIXI.Container {
       constructor() {
             super();
@@ -17,25 +16,27 @@ export class Stage extends PIXI.Container {
             this.filter = new Filters.AsciiFilter()
             this.keySet = new Set()
             this.writerMode = false
-            this.theme = sound._sounds.around
+
+    this.theme = Sound.from({ url: "pictors/main-character.mp3"});
             this.theme.volume = 0.05
-            this.theme.speed = 1.24
             this.theme.play()
             // this.song = sound.add("spice", "/assets/images/ITS.mp3")
             /// ELEMENTS
             this.bg = new Background(this.screenHeight);
             this.groundHeight = this.bg.groundHeight;
-            this.crowd = new Crowd(10, this.groundHeight);
-            this.hero = new Hero(this.screenWidth / 2, 150, this.keySet);
+            this.hero = new Hero(this.keySet);
             this.platforms = new TrainWreck(this.groundHeight);
-            this.text = new TextZone()
-            this.addChild(this.bg, this.hero, this.platforms, this.crowd, this.text)
+            this.text = new TextZone();
+
+            this.addChild(this.bg, this.hero, this.platforms, this.text);
             this.interactive = true;
             this.on("pointerdown", () => {
                   this.hero.startJump();
             });
 
-            this.watch(Manager.app.view)
+
+
+            this.watch(Manager.app.view);
             // Event handling
 
             Matter.Events.on(Manager.physics, 'collisionStart', (e) => { this.hero.land(e) });
@@ -43,8 +44,8 @@ export class Stage extends PIXI.Container {
       transitionIn() {
             Manager.app.stage.addChild(Manager.currentScene)
       }
-      transitionOut() {
 
+      transitionOut() {
             Manager.app.stage.removeChild(Manager.currentScene);
             // Manager.app.stage.off("mousemove") remember to turn off events
       }
@@ -54,7 +55,6 @@ export class Stage extends PIXI.Container {
       }
       update(deltaTime) {
             if ((this.text.content).toLowerCase() === "") {
-                  this.crowd.chaos()
                   this.addChild(new PIXI.Text("Congratulations!", { fontSize: 40 }))
 
             }
@@ -67,7 +67,6 @@ export class Stage extends PIXI.Container {
                   this.bg.update(deltaTime)
                   this.hero.update(deltaTime)
                   this.platforms.update(deltaTime)
-                  this.crowd.update(deltaTime)
             }
       }
 
@@ -76,13 +75,11 @@ export class Stage extends PIXI.Container {
                   this.text.cursorIdx = 0
                   this.bg.filters = [this.filter]
                   this.platforms.filters = [this.filter]
-                  this.crowd.filters = [this.filter]
                   this.text.addChild(this.text.cursor)
             }
             else {
                   this.bg.filters.pop()
                   this.platforms.filters.pop()
-                  this.crowd.filters.pop()
                   this.text.removeChild(this.text.cursor)
             }
             this.writerMode = !this.writerMode
