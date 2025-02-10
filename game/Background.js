@@ -1,42 +1,31 @@
 import * as PIXI from "pixi.js"
 import Matter from "matter-js";
 import { Manager } from "../manager";
-import * as Filters from "pixi-filters"
 export class Background extends PIXI.Container {
     constructor(screenHeight) {
         super();
-        this.road = PIXI.Sprite.from("road");
-        this.road.anchor.set(0, 1);
-        this.road.x = 0;
-        this.road.y = screenHeight;
-        this.groundHeight = this.road.height
-        this.bgBuildings = PIXI.Sprite.from("bgBuildings")
-        this.bgBuildings.anchor.set(0, 1);
-        this.bgBuildings.y = screenHeight - this.groundHeight;
-        this.bgBuildings.scale.set(2.5, 2);
         this.bg = PIXI.Sprite.from("bgWeather")
+        const SCALE = Manager.height*1.5/this.bg.height
+        console.log(SCALE)
+        this.bg.scale.x = SCALE
+        this.bg.scale.y = SCALE
         this.bg.anchor.set(0, 1);
-        this.bg.y = screenHeight - this.groundHeight;
-        this.bg.scale.set(2.5, 2);
-        this.building = PIXI.Sprite.from("building")
-        this.building.anchor.set(0, 1);
-        this.building.x = 50
-        this.building.y = screenHeight - this.groundHeight
-        this.building.scale.set(1.6)
+        this.bg.y = screenHeight+100 ;
+        const bg2 = PIXI.Sprite.from("bgWeather")
+        bg2.scale.x = SCALE
+        bg2.scale.y = SCALE
+        bg2.anchor.set(0, 1);
+        bg2.y = screenHeight+100 ;
+        bg2.x = bg2.width ;
 
-        this.roofTile = new RoofTile(this.building.x, this.building.y - this.building.height, this.building.width)
-        this.addChild(this.bg, this.bgBuildings, this.road, this.building, this.roofTile.sprite);
-        this.bg.filters = [new Filters.AsciiFilter(14), new PIXI.NoiseFilter((Math.trunc(Math.random() * 100)) / 50)]
+
+        this.addChild(this.bg, bg2, );
         this.framer = 0
 
     }
 
     update(deltaTime) {
-   this.framer = (this.framer+1) % 11
 
- if (!this.framer)  {     this.bg.filters.pop()
-        this.bg.filters.push(new PIXI.ColorMatrixFilter((Math.trunc(Math.random() * 100)) / 50))
-}
 
     }
 }

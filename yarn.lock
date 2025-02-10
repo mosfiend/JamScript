@@ -94,6 +94,11 @@
     "@pixi/utils" "7.3.3"
     "@types/offscreencanvas" "^2019.6.4"
 
+"@pixi/devtools@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/@pixi/devtools/-/devtools-2.0.1.tgz"
+  integrity sha512-TFCqNkJoLNYHDELgQ3bKWvA33twWpoUhQB8Y+hneBdDBunRsqZ5ZzwH7+6E5eVaVn7eeLAXHs9QGRGsxM0fRlw==
+
 "@pixi/display@7.3.3":
   version "7.3.3"
   resolved "https://registry.npmjs.org/@pixi/display/-/display-7.3.3.tgz"
@@ -683,7 +688,7 @@ pixi-filters@^5.2.1:
     "@pixi/filter-twist" "5.1.1"
     "@pixi/filter-zoom-blur" "5.1.1"
 
-pixi.js@^7.3.1:
+"pixi.js@^7 || ^8", pixi.js@^7.3.1:
   version "7.3.3"
   resolved "https://registry.npmjs.org/pixi.js/-/pixi.js-7.3.3.tgz"
   integrity sha512-EuAyWZBL5lKViCgYkB6dbwkiI/MNht8O8F8956up9vwGEGf659QRHxfVQoRj8zdNGOBbe51XAxQMfLaW/l0Ekg==
@@ -770,6 +775,11 @@ source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
+
+tweedle.js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/tweedle.js/-/tweedle.js-2.1.0.tgz"
+  integrity sha512-0ReQgVjepoZkE6t0upWNgCRbplHkQJQYk1LStXugwSR728GLFmGDRuaQJlxeC/iBlxud6+P1RdODjaO25vHAqw==
 
 url@^0.11.0:
   version "0.11.3"

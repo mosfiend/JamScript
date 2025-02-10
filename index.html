@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Wass up</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Jersey 15"],
+        },
+        active: (e) => {
+          console.log("font loaded!");
+          // now start setting up your PixiJS (or canvas) stuff!
+        },
+      });
+    </script>
   </head>
   <body>
     <script type="module" src="/main.js"></script>
-    <canvas id="pixi-canvas" tabindex="0" width="100vw"></canvas>
+        <div class="flex">    
+<div>            <canvas id="pixi-canvas" tabindex="0" width="100vw"></canvas>
+</div>
+
+</div>
+
   </body>
 </html>

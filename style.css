@@ -29,6 +29,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+background:#7117D8;
+/* background-image:url("https://blog.sakugabooru.com/wp-content/uploads/2024/11/kinder-world-is-doko.jpg"); */
 }
 
 h1 {
@@ -94,4 +96,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.flex {
+display:flex;
+justify-content:center;
+align-items:center;
+width: 100vw;
+height: 100vh;
 }

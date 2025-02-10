@@ -1,78 +1,47 @@
-import * as PIXI from 'pixi.js';
+import {Container, Graphics, Text} from 'pixi.js';
 import { Manager } from "../manager.js";
 import { Stage } from './Stage.js';
-export class StartMenu extends PIXI.Container {
+export class StartMenu extends Container {
     constructor() {
         super();
         this.screenWidth = Manager.width;
         this.screenHeight = Manager.height;
-        this.menuBox = new PIXI.Container();
-        this.menuBox.position.set(this.screenWidth / 2, this.screenHeight / 2);
-
+this.bg = new Graphics().beginFill(0x2E3037).drawRect(0, 0, 10000, 10000)
+        this.text = new Text("Click to start", {
+            fontSize: 28,
+            fill: 0xfefefe,
+            stroke: 0x87538D,
+            strokeThickness: 5,
+            letterSpacing: 1,
+            align: 'center',
+            wordWrap: true,
+            wordWrapWidth: 700
+        });
+        this.ticker = 0
+        this.text.x = Manager.width/2 -this.text.width/2
+        this.text.y = Manager.height/2 - this.text.height/2
         // Create a play button
-        const playButton = new PIXI.Graphics()
-            .beginFill(0x00ff00)
-            .drawRoundedRect(-100, -30, 200, 60, 15);
-        playButton.interactive = true;
-        playButton.buttonMode = true;
-        playButton.on("pointerdown", () => {
+        this.text.interactive = true;
+        this.text.buttonMode = true;
+        this.text.on("pointerdown", () => {
             Manager.changeScene(new Stage());
 
         });
-        playButton.on("pointerover", () => {
-            playButton.cursor = 'pointer';
-        });
-        playButton.on("pointerout", () => {
-            playButton.cursor = 'default';
-        });
-        this.menuBox.addChild(playButton);
 
-        // Create a play button text
-        const buttonText = new PIXI.Text('Play', {
-            fontSize: 32,
-            fill: 0xffffff,
-            align: 'center',
-        });
-        buttonText.anchor.set(0.5, 0.5);
-        buttonText.position.set(0, -10);
-        this.menuBox.addChild(buttonText);
+        this.bg.interactive = true;
+        this.bg.buttonMode = true;
+        this.bg.on("pointerdown", () => {
+            Manager.changeScene(new Stage());
 
-        // Create additional elements
-        const infoText = new PIXI.Text('Welcome to the Game', {
-            fontSize: 24,
-            fill: 0xffffff,
-            align: 'center',
         });
-        infoText.anchor.set(0.5, 0.5);
-        infoText.position.set(0, -80);
-        this.menuBox.addChild(infoText);
+        this.text.on("pointerover", () => {
+            this.text.cursor = 'pointer';
+        });
+        this.text.on("pointerout", () => {
+            this.text.cursor = 'default';
+        });
 
-        this.optionsButton = new PIXI.Graphics()
-            .beginFill(0x0000ff)
-            .drawRoundedRect(-80, 20, 160, 40, 10);
-        this.optionsButton.interactive = true;
-        this.optionsButton.buttonMode = true;
-        this.optionsButton.on("pointerdown", () => {
-            // Handle options button click
-        });
-        this.optionsButton.on("pointerover", () => {
-            this.optionsButton.cursor = 'pointer';
-        });
-        this.optionsButton.on("pointerout", () => {
-            this.optionsButton.cursor = 'default';
-        });
-        this.menuBox.addChild(this.optionsButton);
-
-        const optionsText = new PIXI.Text('Options', {
-            fontSize: 20,
-            fill: 0xffffff,
-            align: 'center',
-        });
-        optionsText.anchor.set(0.5, 0.5);
-        optionsText.position.set(0, 40);
-        this.menuBox.addChild(optionsText);
-
-        this.addChild(this.menuBox);
+        this.addChild(this.bg, this.text);
     }
 
     transitionIn() {
@@ -86,7 +55,6 @@ export class StartMenu extends PIXI.Container {
     resize(newWidth, newHeight) {
         this.screenWidth = newWidth;
         this.screenHeight = newHeight;
-        this.menuBox.position.set(this.screenWidth / 2, this.screenHeight / 2);
     }
 
     update(deltaTime) {

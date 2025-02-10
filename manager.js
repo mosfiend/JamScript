@@ -1,5 +1,6 @@
 import * as PIXI from "pixi.js";
 import Matter from 'matter-js';
+import { Group } from "tweedle.js";
 
 export class Manager {
     constructor() {
@@ -56,11 +57,19 @@ export class Manager {
         Matter.Runner.run(runner, Manager.physics);
     }
 
+  static clearPhysics() {
+    Matter.World.clear(Manager.physics.world);
+    Matter.Engine.clear(Manager.physics);
+    Manager.physics = null;
+    // Notice how runner may still be running the old physics instance
+  }
+
     static update(deltaTime) {
-        // Group.shared.update(); For your tweens
+        Group.shared.update();
         if (Manager.currentScene != undefined) {
             Manager.currentScene.update(deltaTime)
         }
 
     }
 }
+

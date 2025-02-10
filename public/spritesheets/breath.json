@@ -1,23 +1,67 @@
+
 {
-  "sprites": [
-    {
-      "fileName": "chainsaw-man_ (1).png",
-      "width": 53,
-      "height": 48,
-      "x": 0,
-      "y": 0
+  "frames": {
+    "breath1": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 53,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 53,
+        "h": 48 
+      },
+      "sourceSize": {
+        "w": 0,
+        "h": 0
+      },
+      "pivot": {
+        "x": 0,
+        "y": 0
+      }
+  },
+    "breath2": {
+      "frame": {
+        "x": 54,
+        "y": 0,
+        "w": 52,
+        "h": 49 
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 52,
+        "h": 49 
+      },
+      "sourceSize": {
+        "w": 0,
+        "h": 0
+      },
+      "pivot": {
+        "x": 0,
+        "y": 0
+      }
+  }
     },
-    {
-      "fileName": "chainsaw-man_ (2).png",
-      "width": 53,
-      "height": 49,
-      "x": 53,
-      "y": 0
-    }
-  ],
-  "packMode": "grid",
-  "padding": 0,
-  "backgroundColor": "rgba(0, 0, 0, 0)",
-  "spriteSheetWidth": 106,
-  "spriteSheetHeight": 49
+  "animations": {
+    "breath": ["breath1","breath2"]
+    },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "breath.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 106,
+      "h": 49
+    },
+    "scale": 1
+  }
 }

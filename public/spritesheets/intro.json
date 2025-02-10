@@ -434,7 +434,8 @@
     }
   },
   "animations": {
-    "intro": ["intro1", "intro2", "intro3", "intro4", "intro5", "intro6", "intro7", "intro8", "intro9", "intro10", "intro11", "intro12", "intro13", "intro13", "intro14", "intro15", "intro16", "intro17", "intro18"]
+    "intro": ["intro1", "intro2", "intro3", "intro4", "intro5", "intro6", "intro7", "intro8", "intro9", "intro10", "intro11", "intro12", "intro13", "intro13", "intro14", "intro15", "intro16", "intro17", "intro18"],
+    "launch": ["intro13", "intro14", "intro15", "intro16", "intro17", "intro18"]
     },
   "meta": {
     "app": "http://free-tex-packer.com",
