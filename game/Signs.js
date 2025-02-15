@@ -26,7 +26,7 @@ this.quotes = [
             {quote: `You're getting close to the Creeper, press "S", "K", or "Y" to attack`, x:3000},
 
             {quote: "La maladie parodontale est l'ensemble des affections qui touchent les tissus de soutien de la dent, dont l'amplitude et la signification varient d'un individu à un autre", x: 3500},
-            {quote: "Yep, these signs are just a distraction from the lack of actual gameplay.", x: 4100},
+            {quote: "Yes, these signs are just a distraction from the lack of actual gameplay.", x: 4100},
         ]
         this.signs = [ ]
         for (let i= 0 ;i<this.quotes.length;i++) {
