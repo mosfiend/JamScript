@@ -5,7 +5,7 @@ export const manifest = {
             assets:
             {
                 "scene2": "/images/scene2.png",
-                "tress": "/images/tress.png",
+                "tress": "/images/image.png",
                 "hSleeper": "/images/happysleeper.png",
                 "sleeper": "/images/sleeper.png",
                 "sign": "/images/signA.png",

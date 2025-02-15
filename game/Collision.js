@@ -22,15 +22,15 @@ const road = new Road();
 
         const roadHeight = this.roads[0].height
         this.ground = new Graphics()
-            .beginFill(0xff0000)
-            .drawRect(0, 0, this.screenWidth, 50);
+            .rect(0, 0, this.screenWidth, 50)
+            .fill(0xff0000);
         this.ground.pivot.set(this.ground.width / 2, this.ground.height / 2)
         this.ground.x = this.ground.width / 2
         this.ground.y = this.screenHeight + this.ground.height / 2 - roadHeight
         this.body = Matter.Bodies.rectangle(
             this.ground.x, this.ground.y+10,
             this.ground.width*200, this.ground.height,
-            { friction: 0, isStatic: true });
+            { friction: 1000, isStatic: true });
         Matter.World.add(Manager.physics.world, this.body);
             this.body.ground = this.body
 

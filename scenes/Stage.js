@@ -7,22 +7,21 @@ import { Enemy } from '../game/Enemy.js';
 import { Signs } from '../game/Signs.js';
 import { TrainWreck } from '../game/Collision.js';
 import { TextZone } from '../game/Text.js';
-import * as Filters from 'pixi-filters';
 import { Tween } from 'tweedle.js';
 import { Platforms } from '../game/Platforms.js';
+import { Credits } from './Credits.js';
 export class Stage extends Container {
       constructor() {
             super();
             this.screenWidth = Manager.width;
             this.screenHeight = Manager.height;
-            this.filter = new Filters.AsciiFilter()
-            this.keySet = new Set()
-            this.won1 = false
-            this.won = false
+            this.keySet = new Set();
+            this.won1 = false;
+            this.won = false;
 
-    this.theme = Manager.song1
-            this.theme.volume = 0.05
-            this.theme.play()
+            this.theme = Manager.song1;
+            this.theme.volume = 0.4;
+            this.theme.play();
             // this.song = sound.add("spice", "/assets/images/ITS.mp3")
             /// ELEMENTS
             this.bg = new Background(this.screenHeight);
@@ -43,11 +42,15 @@ export class Stage extends Container {
       }
 
       transitionIn() {
-            Manager.app.stage.addChild(Manager.currentScene)
+            Manager.app.stage.addChild(this)
       }
 
       transitionOut() {
+        new Tween({}).to({},1000)
+.onComplete(()=>{
             Manager.app.stage.removeChild(Manager.currentScene);
+            })
+            .start()
             // Manager.app.stage.off("mousemove") remember to turn off events
       }
 
@@ -57,7 +60,6 @@ export class Stage extends Container {
       }
 
       update(deltaTime) {
-
         this.text2?.update(deltaTime)
         if (this.hero && !this.won1) {
             this.handleEvent();
@@ -126,169 +128,41 @@ y>attack.y+this.hero.y-attack.height&& y<attack.y +this.hero.y +attack.height) {
     win() {
         if (this.won) return;
         this.theme.pause();
-        Manager.song2.volume= 0.01;
-        Manager.song2.play({start: 226});
-        this.bg.filters = [new Filters.MotionBlurFilter()];
+        Manager.song2.volume= 0.5;
+        Manager.song2.play();
         this.won = true;
-const bg = new Graphics().beginFill(0x41213b).drawRect(Manager.app.stage.pivot.x, 0, 10000,10000);
-        bg.alpha = 0;
-        this.addChild(bg);
-
-        let image1 = Sprite.from("tress")
-        image1.x = Manager.app.stage.pivot.x +400
-            image1.width = image1.width/5
-        image1.height = image1.height/5
-        image1.alpha = 0
-        image1.y = this.screenHeight/2- image1.height/2
-let text1 = new Text("Congratulations! \n You beat the game and got your book back!", {
-            fontFamily: 'Jersey 15',
-            fontSize: 28,
-            fill: 0xfefefe,
-            letterSpacing: 1,
-            align: 'center',
-            wordWrap: true,
-            wordWrapWidth: 300
-        });
-        text1.x = Manager.app.stage.pivot.x + 30
-        text1.alpha = 0
-        text1.y = this.screenHeight/2 - text1.height/2
-        this.addChild(image1, text1)
-
-const pause = new Tween({}).to({},2500)
-        const scene1 = new Tween(image1).to({alpha:1},800).onUpdate(()=> {
-            text1.alpha = image1.alpha
-        }).start();
-
-const pause2 = new Tween({}).to({},3000).start();
-        const fade = new Tween(image1).to({alpha:0},400).onUpdate(()=> {
-            text1.alpha = image1.alpha
-        });
-
-
-        let image2 = Sprite.from("scene2")
-        image2.x = Manager.app.stage.pivot.x+ 50
-            image2.width = image2.width* 2
-        image2.height = image2.height*2
-        image2.alpha = 0
-        image2.y = this.screenHeight/2- image2.height/2
-let text2 = new Text("I am tired of listening to this song, hope you enjoyed being the main character", {
-            fontFamily: 'Jersey 15',
-            fontSize: 28,
-            fill: 0xfefefe,
-            letterSpacing: 1,
-            align: 'center',
-            wordWrap: true,
-            wordWrapWidth: 300
-        });
-        text2.x = Manager.app.stage.pivot.x + this.screenWidth/2
-        text2.alpha = 0
-        text2.y = this.screenHeight/2 - text2.height/2
-        this.addChild(image2, text2)
-
-        const scene2 = new Tween(image2).to({alpha:1},800).onUpdate(()=> {
-            text2.alpha = image2.alpha
-        });
-
-
-let text3 = new Text("See ya in a bit :)", {
-            fontFamily: 'Jersey 15',
-            fontSize: 28,
-            fill: 0xfefefe,
-            letterSpacing: 1,
-            align: 'center',
-            wordWrap: true,
-            wordWrapWidth: 300
-        });
-        text3.x = Manager.app.stage.pivot.x + this.screenWidth/2-text3.width/3
-        text3.alpha = 1
-        text3.y = this.screenHeight/2 - text3.height/3
-
-new Tween({}).to({}, 6700).onComplete(()=>{
-        this.addChild(text3)
-})
-
-        const scene4 = new Tween(text3).to({alpha:1},800).onStart(()=>{
-            console.log("hm?")
-        });
-
-        const fade2 = new Tween(image2).to({alpha:0},400).onUpdate(()=> {
-            text2.alpha = image2.alpha
-        }).onComplete(()=> {
-            this.addChild(text3)
-        })
-        scene1.chain(pause)
-pause.chain(fade)
-fade.chain(scene2)
-scene2.chain(pause2)
-pause2.chain(fade2)
-
-
-new Tween(bg).to(
-            {alpha:1}, 800
-        )
-            .onComplete(()=>{
-      Manager.clearPhysics();
-            })
-            .start()
+        this.addChild(new Credits());
     }
-
-  lose() {
-    this.hero.implode();
-    this.lost = true;
-    Manager.music.volume = Math.min(Manager.music.volume, 0.02);
-    const temp = new Graphics()
-      .beginFill(0xcee7e1)
-      .drawRect(0, 0, this.screenWidth, this.screenHeight);
-    temp.y = Manager.app.stage.pivot.y;
-    temp.alpha = 0;
-    this.addChild(temp);
-    const tween1 = new Tween(temp).to({ alpha: 0 }, 300);
-    const tween2 = new Tween(temp).to({ alpha: 1 }, 500);
-
-    tween1.start().onComplete(() => {
-      tween2.start().onComplete(() => {
-        Manager.app.stage.pivot.set(0, 0);
-        const scene = new GameOver(func, this.score.score);
-        this.addChild(scene);
-      });
-    });
-    function func() {
-      // Manager.usedOps = new Set()
-    }
-  }
 
     playScene1() {
             this.enemy = new Enemy()
             this.addChild(this.enemy);
-const run1 = new Tween(this.enemy.sprite).to({x:2000}, 45).start()
+const run1 = new Tween(this.enemy.sprite).to({x:2000}, 4400).start()
         .onComplete(()=> {
             this.hero = new Hero(this.keySet);
             this.on("pointerdown", () => {
                   this.hero.startJump();
             });
 
-
             Matter.Events.on(Manager.physics, 'collisionStart', (e) => { this.hero.land(e) });
-            this.addChild( this.hero);
+            this.addChild(this.hero);
             });
 
 const run2 = new Tween(this.enemy.sprite).to({x:4900},500);
 
-this.backnforth = new Tween(this.enemy.sprite).to({x:5300},1800).yoyo(true).repeat(Infinity).
+this.backnforth = new Tween(this.enemy.sprite).to({x:5300}, 1800).yoyo(true).repeat(Infinity).
         onRepeat(()=>{
-            console.log("swap")
 this.enemy.sprite.scale.x = this.enemy.sprite.scale.x*-1
-
         });
-        run1.chain(run2);
-        run2.chain(this.backnforth);
+
+        run1.chain(run2.chain(this.backnforth));
     }
 
     playScene2() {
         this.removeChild(this.signs)
 this.backnforth.pause()
     this.enemy.die()
-    this.theme.volume = 0.005
+    this.theme.volume = 0.1
         const speech = Sprite.from("speech");
         speech.width = speech.width / 3.5;
         speech.height = speech.height / 6
@@ -315,10 +189,10 @@ speech.y = -50;
 
         const yes = new Text("Yes", {
             fontFamily: 'Jersey 15',
-            fontSize: 28,
+            fontSize: 34,
             fill: 0xfefefe,
             stroke: 0x87538D,
-            strokeThickness: 10,
+            strokeThickness: 9,
             letterSpacing: 1,
             align: 'center',
             wordWrap: true,
@@ -331,23 +205,26 @@ speech.y = -50;
             this.win()
         });
 
-
         const no = new Text("No", {
             fontFamily: 'Jersey 15',
-            fontSize: 28,
+            fontSize: 34,
             fill: 0xfefefe,
             stroke: 0x87538D,
-            strokeThickness: 10,
+            strokeThickness: 9,
             letterSpacing: 1,
             align: 'center',
             wordWrap: true,
             wordWrapWidth: 700
         });
-        no.interactive = true;
+        no.eventMode = "static";
         no.buttonMode = true;
+        no.cursor = 'pointer';
         no.on("pointerover", () => {
-            no.cursor = 'pointer';
-            new Tween(no).to({alpha:0},600).start()
+            if (no.desactivated) return;
+            no.desactivated = true
+            new Tween(no).to({alpha:0},600).onComplete(()=>{
+            no.cursor = 'default';
+            }).start()
         })
         yes.on("pointerover", () => {
             yes.cursor = 'pointer';
@@ -367,8 +244,8 @@ speech.y = -50;
         no.y = 225
         this.text2.x = Manager.app.stage.pivot.x + this.screenWidth/2 -200;
 
-            new Tween({}).to({},1100).start().onComplete(()=> {
-                new Tween(yes).to({alpha:1}, 500).start().onUpdate(()=>{
+            new Tween({}).to({},2500).start().onComplete(()=> {
+                new Tween(yes).to({alpha:1}, 800).start().onUpdate(()=>{
 no.alpha = yes.alpha
 
                 });

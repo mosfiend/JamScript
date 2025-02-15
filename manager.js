@@ -1,4 +1,4 @@
-import * as PIXI from "pixi.js";
+import { Application, Ticker } from "pixi.js";
 import Matter from 'matter-js';
 import { Group } from "tweedle.js";
 
@@ -18,24 +18,25 @@ export class Manager {
     }
 
     // Use this function ONCE to start the entire machinery
-    static initialize(width, height, background) {
+    static async initialize(width, height, background) {
 
         // store our width and height
         Manager._width = width;
         Manager._height = height;
 
         // Create our pixi app
-        Manager.app = new PIXI.Application({
-            view: document.getElementById("pixi-canvas"),
-            // resizeTo: window , // This line here handles the actual resize!
-            // resolution: window.devicePixelRatio || 1,
-            // autoDensity: true,
-            backgroundColor: background
-        });
-        Manager.app.ticker.add(Manager.update)
+    Manager.app = new Application();
+
+    await Manager.app.init({
+      view: document.getElementById("pixi-canvas"),
+      resolution: window.devicePixelRatio || 1,
+      autoDensity: true,
+      antialias: true,
+      backgroundColor: background,
+    });
+    Ticker.shared.add(Manager.update);
         window.addEventListener("resize", Manager.resize);
         globalThis.__PIXI_APP__ = Manager.app;
-
     }
 
     static resize() {

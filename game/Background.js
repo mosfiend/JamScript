@@ -19,7 +19,7 @@ export class Background extends PIXI.Container {
         bg2.x = bg2.width ;
 
 
-        this.addChild(this.bg, bg2, );
+        this.addChild(this.bg, bg2);
         this.framer = 0
 
     }

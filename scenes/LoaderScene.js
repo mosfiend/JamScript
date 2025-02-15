@@ -25,7 +25,7 @@ export class LoaderScene extends Container {
         this.initializeLoader().then(() => {
             setTimeout(()=>{
             this.gameLoaded()
-            }, 3500)
+            }, 0)
         })
     }
     update(deltaTime) {
@@ -50,7 +50,7 @@ this.text.text = "Loading"
         }
     async initializeLoader() {
         Manager.createPhysics(); // No idea where I should put this, it's not async but I need to be loaded a bit before my assets
-    Manager.song1 = Sound.from({ url: "pictors/main-character.mp3"});
+    Manager.song1 =  Sound.from({ url: "pictors/main-character.mp3"});
     // Manager.song1.volume = ;
     Manager.song2 = Sound.from({ url: "pictors/main-character-vocal.mp3"});
     Manager.song2.volume = 0

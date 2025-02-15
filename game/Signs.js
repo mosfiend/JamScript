@@ -21,12 +21,12 @@ this.quotes = [
             {quote: "Who would ever buy two copies of the same book though?", x:1500},
 
             {quote: "Maybe someone who likes to read the same thing twice?", x:2000},
-            {quote: "Maybe someone who likes to read the same thing  twice?", x:2100},
+            {quote: "Maybe someone who likes to read the same thing  twice?", x:2200},
 
-            {quote: `We're getting close to the Creeper, press "S", "K", or "Y" to attack`, x:2500},
+            {quote: `You're getting close to the Creeper, press "S", "K", or "Y" to attack`, x:3000},
 
-            {quote: "La maladie parodontale est l'ensemble des affections qui touchent les tissus de soutien de la dent, dont l'amplitude et la signification varient d'un individu à un autre", x: 3400},
-            {quote: "Running out of things to write... How was your day?", x: 3800},
+            {quote: "La maladie parodontale est l'ensemble des affections qui touchent les tissus de soutien de la dent, dont l'amplitude et la signification varient d'un individu à un autre", x: 3500},
+            {quote: "Yep, these signs are just a distraction from the lack of actual gameplay.", x: 4100},
         ]
         this.signs = [ ]
         for (let i= 0 ;i<this.quotes.length;i++) {

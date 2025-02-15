@@ -7,36 +7,12 @@
   resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.18.20.tgz"
   integrity sha512-UYqiqemphJcNsFEskc73jQ7B9jgwjWrSayxawS6UVFZGWrAAtkzjxSqnoclCXxWtfwLdzU+vTpcNYhpn43uP1w==
 
-"@pixi/accessibility@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/accessibility/-/accessibility-7.3.3.tgz"
-  integrity sha512-cHiIEP54RNqvPKmi45HvvnTbiWU+/lzdTY0zK7OXx3TmcEQRn2A7GZ1I+uxx476NeXGJtGSvv3copyxFjPB6Ew==
-
-"@pixi/app@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/app/-/app-7.3.3.tgz"
-  integrity sha512-MS5r/yU0CrWMPXXrgKAzgC2KC35Och8fT9z6J1XUCs7yHhdO8768rnSePJuzhj9Yaclv7PUpNQzh8rG9o/MzkQ==
-
 "@pixi/assets@^7.0.0":
   version "7.4.2"
   resolved "https://registry.npmjs.org/@pixi/assets/-/assets-7.4.2.tgz"
   integrity sha512-anxho59H9egZwoaEdM5aLvYyxoz6NCy3CaQIvNHD1bbGg8L16Ih0e26QSBR5fu53jl8OjT6M7s+p6n7uu4+fGA==
   dependencies:
     "@types/css-font-loading-module" "^0.0.12"
-
-"@pixi/assets@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/assets/-/assets-7.3.3.tgz"
-  integrity sha512-KcLXVehdJ2kc2bSnTfatLPLL6sLD7dwU+EZ5bWQ/PZDSsfML3kLFvq84VXd4k8LKNX4RCvfy4yeeIUW1o5tnMg==
-  dependencies:
-    "@types/css-font-loading-module" "^0.0.12"
-
-"@pixi/color@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/color/-/color-7.3.3.tgz"
-  integrity sha512-IiiFhNIqXt7yULe0Wkq5Hn38ymDoEen/6EvV2y2AQIOu6TyuET5PGswAdMfG7ZjfwBaCudK6yQEUjWaXbgRUmw==
-  dependencies:
-    "@pixi/colord" "^2.9.6"
 
 "@pixi/color@7.4.2":
   version "7.4.2"
@@ -49,16 +25,6 @@
   version "2.9.6"
   resolved "https://registry.npmjs.org/@pixi/colord/-/colord-2.9.6.tgz"
   integrity sha512-nezytU2pw587fQstUu1AsJZDVEynjskwOL+kibwcdxsMBFqPsFFNA7xl0ii/gXuDi6M0xj3mfRJj8pBSc2jCfA==
-
-"@pixi/compressed-textures@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/compressed-textures/-/compressed-textures-7.3.3.tgz"
-  integrity sha512-4h1NKePF5blN7qux29yEnKiGdk4vZif59XtLviW7Y3r9MKgKSoizDl0RqU4SKo4eC1P0jpt1qOjiG4TE+AjXGQ==
-
-"@pixi/constants@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/constants/-/constants-7.3.3.tgz"
-  integrity sha512-ww1JdekmKBUqHyPq8A5L+86FkzpS4KidlBm9wkX1fcd+6QQzq/vbx1JOz6m3CmH5LnlmDZ+zysLezvpZlBcwwA==
 
 "@pixi/constants@7.4.2":
   version "7.4.2"
@@ -79,50 +45,15 @@
     "@pixi/ticker" "7.4.2"
     "@pixi/utils" "7.4.2"
 
-"@pixi/core@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/core/-/core-7.3.3.tgz"
-  integrity sha512-064tuK6NoGIl/2Wf4EUlaLLlnRMZuDdLqnISsj2/A70towg2QUWgHhwZsCB4NvAssidWu/sIT+vk5IKDmh1LKA==
-  dependencies:
-    "@pixi/color" "7.3.3"
-    "@pixi/constants" "7.3.3"
-    "@pixi/extensions" "7.3.3"
-    "@pixi/math" "7.3.3"
-    "@pixi/runner" "7.3.3"
-    "@pixi/settings" "7.3.3"
-    "@pixi/ticker" "7.3.3"
-    "@pixi/utils" "7.3.3"
-    "@types/offscreencanvas" "^2019.6.4"
-
 "@pixi/devtools@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npmjs.org/@pixi/devtools/-/devtools-2.0.1.tgz"
   integrity sha512-TFCqNkJoLNYHDELgQ3bKWvA33twWpoUhQB8Y+hneBdDBunRsqZ5ZzwH7+6E5eVaVn7eeLAXHs9QGRGsxM0fRlw==
 
-"@pixi/display@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/display/-/display-7.3.3.tgz"
-  integrity sha512-iULZ2E6Z4vhI0FypXpUbtA+CODnj/CuTt2pi9gsw00ILI12eEx76cAiazvhxnCNqcfmj1RRK2P6s9Vzr5WmEIg==
-
-"@pixi/events@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/events/-/events-7.3.3.tgz"
-  integrity sha512-1oDfdFtKsy0Z9ew09MrSYGIIeGnBXr/c7866A32Od3KXql0dhd7UpFFpaFKLCXydDHRgFkjOP7t0/Pp1luTvfg==
-
-"@pixi/extensions@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/extensions/-/extensions-7.3.3.tgz"
-  integrity sha512-Of44Wde0ZHYCuMoDLFl/8SOSPV2NiDBUB6QKBvYvNdhVslbO3pxrn9oQH9Fmsd8iGcGJ/YtyI5H2T/ky4Bo6AQ==
-
 "@pixi/extensions@7.4.2":
   version "7.4.2"
   resolved "https://registry.npmjs.org/@pixi/extensions/-/extensions-7.4.2.tgz"
   integrity sha512-Hmx2+O0yZ8XIvgomHM9GZEGcy9S9Dd8flmtOK5Aa3fXs/8v7xD08+ANQpN9ZqWU2Xs+C6UBlpqlt2BWALvKKKA==
-
-"@pixi/extract@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/extract/-/extract-7.3.3.tgz"
-  integrity sha512-quD61mNtgq3w2USIPUBOuxD9kVWIPoh8offqJugT4ZZS2XlSnh2FvLjCEC66jVmMM0tmk6HGAfc5xRFNlyw8PQ==
 
 "@pixi/filter-adjustment@5.1.1":
   version "5.1.1"
@@ -140,11 +71,6 @@
   version "7.4.2"
   resolved "https://registry.npmjs.org/@pixi/filter-alpha/-/filter-alpha-7.4.2.tgz"
   integrity sha512-9OsKJ+yvY2wIcQXwswj5HQBiwNGymwmqdxfp7mo+nZSBoDmxUqvMZzE9UNJ3eUlswuNvNRO8zNOsQvwdz7WFww==
-
-"@pixi/filter-alpha@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/filter-alpha/-/filter-alpha-7.3.3.tgz"
-  integrity sha512-StLLxEkCyghK3dhzLZD9jMu4lZ/ir4Bah2XXXWGhwE+XCO+//rnXreZ8v74R52WbaLUNDHzwlbq7/+BABwMu5w==
 
 "@pixi/filter-ascii@5.1.1":
   version "5.1.1"
@@ -166,11 +92,6 @@
   resolved "https://registry.npmjs.org/@pixi/filter-blur/-/filter-blur-7.4.2.tgz"
   integrity sha512-gOXBbIUx6CRZP1fmsis2wLzzSsofrqmIHhbf1gIkZMIQaLsc9T7brj+PaLTTiOiyJgnvGN5j20RZnkERWWKV0Q==
 
-"@pixi/filter-blur@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/filter-blur/-/filter-blur-7.3.3.tgz"
-  integrity sha512-AZzMbcFoL+uHxiVM2nQrQM0MQdLdd5mw7Fd4F60ROB96tmMK/M5W/FTqgdqXUQYld6wCFZKtJMulonVaPKLXDA==
-
 "@pixi/filter-bulge-pinch@5.1.1":
   version "5.1.1"
   resolved "https://registry.npmjs.org/@pixi/filter-bulge-pinch/-/filter-bulge-pinch-5.1.1.tgz"
@@ -185,11 +106,6 @@
   version "5.1.1"
   resolved "https://registry.npmjs.org/@pixi/filter-color-map/-/filter-color-map-5.1.1.tgz"
   integrity sha512-WvDKvweXkg/t9t40thFlN1d/kUrWXGsxpRpFPNmkrZF6hNxdRjqgfg4wxUOev7uZwHIjcZtTfoLRKhJjF+1uqw==
-
-"@pixi/filter-color-matrix@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/filter-color-matrix/-/filter-color-matrix-7.3.3.tgz"
-  integrity sha512-Ot9lQ24lff4DPok0qy+c3IekfEuGf0Y1mx/dB3iLceys2hJHF5wK8rrhKrA1vc5IgrirbZpmjK8it9cVFzEW2g==
 
 "@pixi/filter-color-overlay@5.1.1":
   version "5.1.1"
@@ -216,11 +132,6 @@
   resolved "https://registry.npmjs.org/@pixi/filter-crt/-/filter-crt-5.1.1.tgz"
   integrity sha512-w+rRbR7eTsPf18QPB68Wiyx8laC+v7fYb3hRVhnq/j6yRUJKQgg4HK5KLP9jfUJ9FJvxy4bzLSDQulvxbOMJZg==
 
-"@pixi/filter-displacement@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/filter-displacement/-/filter-displacement-7.3.3.tgz"
-  integrity sha512-fBnZTUmt6wwazdk/ZDW3HJEkf9s5b8uDuOwHvUAPWTJ6oYqwAjFXnrTlhEwB/Fp+0v6hUVVlHWEYk07HVgjEIg==
-
 "@pixi/filter-dot@5.1.1":
   version "5.1.1"
   resolved "https://registry.npmjs.org/@pixi/filter-dot/-/filter-dot-5.1.1.tgz"
@@ -237,11 +148,6 @@
   version "5.1.1"
   resolved "https://registry.npmjs.org/@pixi/filter-emboss/-/filter-emboss-5.1.1.tgz"
   integrity sha512-AoAFVzrMcCXldU+27hvJ95tcKNOVLnanlq1z838l2SzYGgso+ICbLauUz+o2PL/znudUJE6oky+I6WJzeavDsQ==
-
-"@pixi/filter-fxaa@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/filter-fxaa/-/filter-fxaa-7.3.3.tgz"
-  integrity sha512-xq5xcpu68axMrGsVOcpxqebLAa+B4yBSLQlI2rsn7s8YtWY+pC20lsaNnKDlrv9hwJ1Ah7BtBZy0EVVaeFNYqA==
 
 "@pixi/filter-glitch@5.1.1":
   version "5.1.1"
@@ -282,11 +188,6 @@
   version "5.1.1"
   resolved "https://registry.npmjs.org/@pixi/filter-multi-color-replace/-/filter-multi-color-replace-5.1.1.tgz"
   integrity sha512-P1shsJXEOpJGe9FdCUgCMi/nius86lBfb6cDIFM4oXdZfzuBUfWjZfUm7uofOvK7IWSrlXYrYoqp75H0XrLZ8A==
-
-"@pixi/filter-noise@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/filter-noise/-/filter-noise-7.3.3.tgz"
-  integrity sha512-Hwwk1xLvA+0wTqJtKTnIGzyZmLubm5ylgqsMRHQqujDtVSIqE2SY1iVUcGA5vv31C7rFFkxGT4yhtfnYBNCvKQ==
 
 "@pixi/filter-old-film@5.1.1":
   version "5.1.1"
@@ -343,74 +244,15 @@
   resolved "https://registry.npmjs.org/@pixi/filter-zoom-blur/-/filter-zoom-blur-5.1.1.tgz"
   integrity sha512-0n10xOqACC2vm9Lpsq37Y/edDvp/B7xsBdkuWxeCI7Ta7J22fsJ8IHG1iUyxgdZGa+SCPcKiFoTrYEUu5PLCpA==
 
-"@pixi/graphics@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/graphics/-/graphics-7.3.3.tgz"
-  integrity sha512-czX/SEQTSCI3kkH5DFAcchPaPYOAF7cz1P5K2hVvClE/bbbIWN0H2sBIF6pIY1ENkZ0aguQs36yDeXUDWXyoiQ==
-
-"@pixi/math@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/math/-/math-7.3.3.tgz"
-  integrity sha512-kaHN6iusINPS0wIbrhP82za+B2qNDWHPHip/QtmpQTp81ibOIfHlDMOlsnE6rSdelTFNhrNWoTWU8IvXUbvy8g==
-
 "@pixi/math@7.4.2":
   version "7.4.2"
   resolved "https://registry.npmjs.org/@pixi/math/-/math-7.4.2.tgz"
   integrity sha512-7jHmCQoYk6e0rfSKjdNFOPl0wCcdgoraxgteXJTTHv3r0bMNx2pHD9FJ0VvocEUG7XHfj55O3+u7yItOAx0JaQ==
 
-"@pixi/mesh-extras@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/mesh-extras/-/mesh-extras-7.3.3.tgz"
-  integrity sha512-2TW1n97PpSZIZomfoEcKezGeGLPyd82ng2u8SXQoy9keCmB2yK361/RO88jvWbY4qpnJn/89LiLyYEBiJtSmWg==
-
-"@pixi/mesh@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/mesh/-/mesh-7.3.3.tgz"
-  integrity sha512-8G3FO44wLDimNlCqXBKF+zQ3nBqJ4kMBbIjGxRaRkJmahcMYkY2zJpYsYh1YqKQztL9UmcP5V170VEIcPsmaJw==
-
-"@pixi/mixin-cache-as-bitmap@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/mixin-cache-as-bitmap/-/mixin-cache-as-bitmap-7.3.3.tgz"
-  integrity sha512-Vv/H24CADY5w2DZaTYhXsfr8wAyKsg6gYn0DLgWDnAI3PWkRcB0fVDfowlHAEzltfxyH4tp9LVc2jtbEIKfSlQ==
-
-"@pixi/mixin-get-child-by-name@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/mixin-get-child-by-name/-/mixin-get-child-by-name-7.3.3.tgz"
-  integrity sha512-75vlViVaynPyIYQIaoU08k1iP+8s9ct2YEnW91vyiHGxxE7BBimiYomWkAUYXtSnaSFoDkNPOh7iI91Icmkf+w==
-
-"@pixi/mixin-get-global-position@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/mixin-get-global-position/-/mixin-get-global-position-7.3.3.tgz"
-  integrity sha512-ZEScRlx/KSr0z40+xqF9jl9N8j0aFZCNwSluoMLuFecvn4kpaCQx8i4F8j+GkkdrnCfanSYE9ySADlUCsKmzHA==
-
-"@pixi/particle-container@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/particle-container/-/particle-container-7.3.3.tgz"
-  integrity sha512-OxigacwSbPjVogahmBYUiYMIH+NhNa+jvGAk5OYEF431gcVmjtravPbk7mmFdGKmOMICztSyVX8kOyhXxCv63A==
-
-"@pixi/prepare@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/prepare/-/prepare-7.3.3.tgz"
-  integrity sha512-2SdTyHJSDZeaEMuxXqOX01FUDhIjfWUmVCufLXxzjd8gZ52RWBpohl2gDRszPJMyPox142xzUiCnb4RuNXGHDw==
-
-"@pixi/runner@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/runner/-/runner-7.3.3.tgz"
-  integrity sha512-LUObHyxM3tK504ChbioYySZhFhyNs779uA71fuWSFV04Ry0WNlbqVvwTbKGkyR6er6blfxdqk7d51WmuQtfLCg==
-
 "@pixi/runner@7.4.2":
   version "7.4.2"
   resolved "https://registry.npmjs.org/@pixi/runner/-/runner-7.4.2.tgz"
   integrity sha512-LPBpwym4vdyyDY5ucF4INQccaGyxztERyLTY1YN6aqJyyMmnc7iqXlIKt+a0euMBtNoLoxy6MWMvIuZj0JfFPA==
-
-"@pixi/settings@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/settings/-/settings-7.3.3.tgz"
-  integrity sha512-a1OePduDPOfnrCm1U1RL7JhuEAncA5/jNwF51urclXU6HNTHiJT41/S6KELPoV8NbLyJCKtnKwzbbPkzKwc0Yg==
-  dependencies:
-    "@pixi/constants" "7.3.3"
-    "@types/css-font-loading-module" "^0.0.12"
-    ismobilejs "^1.1.0"
 
 "@pixi/settings@7.4.2":
   version "7.4.2"
@@ -426,50 +268,6 @@
   resolved "https://registry.npmjs.org/@pixi/sound/-/sound-5.2.2.tgz"
   integrity sha512-WjUDD24nQaAA2+aHbvDbgB/9l/kni3aNlZSmunU99KBGrQ9NfGS/VvAUxA88b7eOLXNvskzW2cvEnGMbltRiFA==
 
-"@pixi/sprite-animated@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/sprite-animated/-/sprite-animated-7.3.3.tgz"
-  integrity sha512-BYvehHk3PlNln9tRfZ/zGp2MzVwRjggFe+s4NCQd1EU/NPQewqJGCAiQFB4Gc3hFK2Y8wkW7SpGAzuk/E2WTxg==
-
-"@pixi/sprite-tiling@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/sprite-tiling/-/sprite-tiling-7.3.3.tgz"
-  integrity sha512-T4ms0TcfKq7JNRaUBaQyZsaxWziPh2EY10vFQEG17J3uyCrjQmN4dDS9AMoaltL1K3vh+CTSUnWO8S8mE1dn4Q==
-
-"@pixi/sprite@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/sprite/-/sprite-7.3.3.tgz"
-  integrity sha512-P/RxnvNV0PiuyaT9HA8F1aX9krp1BgjllBQcn6KHVxyAP8tJE0TD9pfHOU1+xRuoX37swXRQiDFTF6YvWzozUQ==
-
-"@pixi/spritesheet@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/spritesheet/-/spritesheet-7.3.3.tgz"
-  integrity sha512-aAebizGNiKijWmJ39bnAb8FbuXbxRINuWZ2xt7ANzJQxhbo7dX+qlF4pz91yj3gHQaulzJM2oKz4a5q6cHa7dw==
-
-"@pixi/text-bitmap@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/text-bitmap/-/text-bitmap-7.3.3.tgz"
-  integrity sha512-2IOBoSHtb2e1aoxB/pfJPFW34XeY8HpDtGJKn3F9IUYpBo6nnnZ6DuJNZyFG2r/hiytjVvulqI66CzOH/eJJ4A==
-
-"@pixi/text-html@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/text-html/-/text-html-7.3.3.tgz"
-  integrity sha512-z8vsgsqVJuFEVX07wh0IYAwQ5DBiel8Lhxo2Ly8594O0mIdQ1IPvtAPv+WRyG35WT0i26J7GL2BZxURouDP2WA==
-
-"@pixi/text@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/text/-/text-7.3.3.tgz"
-  integrity sha512-s9BLmiURYeJppPYB040jrGbtbsWM9PcXSRtr40xrbR0a+HPlxDEWCaHka9DiUFr/lIuOpA0y/YjmZskq5o5R7g==
-
-"@pixi/ticker@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/ticker/-/ticker-7.3.3.tgz"
-  integrity sha512-AxeMKP9vTcla+yYXCABc0uKUODjIsJRXk3DCHVpoPeeqRYPaKH291RtDw92QFw7FFgGBbRgsptBjF9Q+uO5hDA==
-  dependencies:
-    "@pixi/extensions" "7.3.3"
-    "@pixi/settings" "7.3.3"
-    "@pixi/utils" "7.3.3"
-
 "@pixi/ticker@7.4.2":
   version "7.4.2"
   resolved "https://registry.npmjs.org/@pixi/ticker/-/ticker-7.4.2.tgz"
@@ -478,19 +276,6 @@
     "@pixi/extensions" "7.4.2"
     "@pixi/settings" "7.4.2"
     "@pixi/utils" "7.4.2"
-
-"@pixi/utils@7.3.3":
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/@pixi/utils/-/utils-7.3.3.tgz"
-  integrity sha512-rgWD0YV6oDKOVuQJ9ra6g3VdoN8usC6Kj/t3Ba1t9P+k9qUKIM0gCr9/bxFf7CJ/EUS8A2WTVfEmJVN2TwZfxg==
-  dependencies:
-    "@pixi/color" "7.3.3"
-    "@pixi/constants" "7.3.3"
-    "@pixi/settings" "7.3.3"
-    "@types/earcut" "^2.1.0"
-    earcut "^2.2.4"
-    eventemitter3 "^4.0.0"
-    url "^0.11.0"
 
 "@pixi/utils@7.4.2":
   version "7.4.2"
@@ -510,15 +295,20 @@
   resolved "https://registry.npmjs.org/@types/css-font-loading-module/-/css-font-loading-module-0.0.12.tgz"
   integrity sha512-x2tZZYkSxXqWvTDgveSynfjq/T2HyiZHXb00j/+gy19yp70PHCizM48XFdjBCWH7eHBD0R5i/pw9yMBP/BH5uA==
 
-"@types/earcut@^2.1.0":
+"@types/earcut@^2.1.0", "@types/earcut@^2.1.4":
   version "2.1.4"
   resolved "https://registry.npmjs.org/@types/earcut/-/earcut-2.1.4.tgz"
   integrity sha512-qp3m9PPz4gULB9MhjGID7wpo3gJ4bTGXm7ltNDsmOvsPduTeHp8wSW9YckBj3mljeOh4F0m2z/0JKAALRKbmLQ==
 
-"@types/offscreencanvas@^2019.6.4":
-  version "2019.7.3"
-  resolved "https://registry.npmjs.org/@types/offscreencanvas/-/offscreencanvas-2019.7.3.tgz"
-  integrity sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A==
+"@webgpu/types@^0.1.40":
+  version "0.1.54"
+  resolved "https://registry.npmjs.org/@webgpu/types/-/types-0.1.54.tgz"
+  integrity sha512-81oaalC8LFrXjhsczomEQ0u3jG+TqE6V9QHLA8GNZq/Rnot0KDugu3LhSYSlie8tSdooAN1Hov05asrUUp9qgg==
+
+"@xmldom/xmldom@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.10.tgz"
+  integrity sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==
 
 call-bind@^1.0.0:
   version "1.0.5"
@@ -576,6 +366,11 @@ eventemitter3@^4.0.0:
   resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
+eventemitter3@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz"
+  integrity sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
+
 function-bind@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz"
@@ -622,7 +417,7 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
-ismobilejs@^1.1.0:
+ismobilejs@^1.1.0, ismobilejs@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ismobilejs/-/ismobilejs-1.1.1.tgz"
   integrity sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw==
@@ -641,6 +436,11 @@ object-inspect@^1.9.0:
   version "1.13.1"
   resolved "https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.1.tgz"
   integrity sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==
+
+parse-svg-path@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/parse-svg-path/-/parse-svg-path-0.1.2.tgz"
+  integrity sha512-JyPSBnkTJ0AI8GGJLfMXvKq42cj5c006fnLz6fXy6zfoVjJizi8BNTpu8on8ziI1cKy9d9DGNuY17Ce7wuejpQ==
 
 picocolors@^1.0.0:
   version "1.0.0"
@@ -688,41 +488,20 @@ pixi-filters@^5.2.1:
     "@pixi/filter-twist" "5.1.1"
     "@pixi/filter-zoom-blur" "5.1.1"
 
-"pixi.js@^7 || ^8", pixi.js@^7.3.1:
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/pixi.js/-/pixi.js-7.3.3.tgz"
-  integrity sha512-EuAyWZBL5lKViCgYkB6dbwkiI/MNht8O8F8956up9vwGEGf659QRHxfVQoRj8zdNGOBbe51XAxQMfLaW/l0Ekg==
+"pixi.js@^7 || ^8", pixi.js@^8.8.0:
+  version "8.8.0"
+  resolved "https://registry.npmjs.org/pixi.js/-/pixi.js-8.8.0.tgz"
+  integrity sha512-0xW8tKa+uF28mi1SwvnNscMpYJSQrqLN7jJs6Ore37FZoXmIRzQNrGA6drpHDVTuEmoqJlSiGLCk5cUgz3ODgQ==
   dependencies:
-    "@pixi/accessibility" "7.3.3"
-    "@pixi/app" "7.3.3"
-    "@pixi/assets" "7.3.3"
-    "@pixi/compressed-textures" "7.3.3"
-    "@pixi/core" "7.3.3"
-    "@pixi/display" "7.3.3"
-    "@pixi/events" "7.3.3"
-    "@pixi/extensions" "7.3.3"
-    "@pixi/extract" "7.3.3"
-    "@pixi/filter-alpha" "7.3.3"
-    "@pixi/filter-blur" "7.3.3"
-    "@pixi/filter-color-matrix" "7.3.3"
-    "@pixi/filter-displacement" "7.3.3"
-    "@pixi/filter-fxaa" "7.3.3"
-    "@pixi/filter-noise" "7.3.3"
-    "@pixi/graphics" "7.3.3"
-    "@pixi/mesh" "7.3.3"
-    "@pixi/mesh-extras" "7.3.3"
-    "@pixi/mixin-cache-as-bitmap" "7.3.3"
-    "@pixi/mixin-get-child-by-name" "7.3.3"
-    "@pixi/mixin-get-global-position" "7.3.3"
-    "@pixi/particle-container" "7.3.3"
-    "@pixi/prepare" "7.3.3"
-    "@pixi/sprite" "7.3.3"
-    "@pixi/sprite-animated" "7.3.3"
-    "@pixi/sprite-tiling" "7.3.3"
-    "@pixi/spritesheet" "7.3.3"
-    "@pixi/text" "7.3.3"
-    "@pixi/text-bitmap" "7.3.3"
-    "@pixi/text-html" "7.3.3"
+    "@pixi/colord" "^2.9.6"
+    "@types/css-font-loading-module" "^0.0.12"
+    "@types/earcut" "^2.1.4"
+    "@webgpu/types" "^0.1.40"
+    "@xmldom/xmldom" "^0.8.10"
+    earcut "^2.2.4"
+    eventemitter3 "^5.0.1"
+    ismobilejs "^1.1.1"
+    parse-svg-path "^0.1.2"
 
 postcss@^8.4.27:
   version "8.4.33"

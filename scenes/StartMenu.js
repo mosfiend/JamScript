@@ -1,12 +1,14 @@
 import {Container, Graphics, Text} from 'pixi.js';
 import { Manager } from "../manager.js";
 import { Stage } from './Stage.js';
+import { Credits } from './Credits.js';
 export class StartMenu extends Container {
     constructor() {
         super();
         this.screenWidth = Manager.width;
         this.screenHeight = Manager.height;
-this.bg = new Graphics().beginFill(0x2E3037).drawRect(0, 0, 10000, 10000)
+this.bg = new Graphics().rect(0, 0, 10000, 10000)
+.fill(0x2E3037);
         this.text = new Text("Click to start", {
             fontSize: 28,
             fill: 0xfefefe,
@@ -25,20 +27,17 @@ this.bg = new Graphics().beginFill(0x2E3037).drawRect(0, 0, 10000, 10000)
         this.text.buttonMode = true;
         this.text.on("pointerdown", () => {
             Manager.changeScene(new Stage());
-
         });
 
-        this.bg.interactive = true;
+        this.bg.eventMode = "static";
         this.bg.buttonMode = true;
+        this.text.cursor = 'pointer';
         this.bg.on("pointerdown", () => {
             Manager.changeScene(new Stage());
-
         });
         this.text.on("pointerover", () => {
-            this.text.cursor = 'pointer';
         });
         this.text.on("pointerout", () => {
-            this.text.cursor = 'default';
         });
 
         this.addChild(this.bg, this.text);

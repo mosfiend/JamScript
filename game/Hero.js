@@ -25,7 +25,7 @@ export class Hero extends Container {
             this.sprite.y - 55 / 2,
             65,
             50,
-            { friction: 0 });
+            { friction: 0, frictionAir:0.03, mass: 0 });
         Matter.World.add(Manager.physics.world, this.body);
         this.body.gameHero = true; // why am i using this 
         this.dy = 15
@@ -37,17 +37,17 @@ export class Hero extends Container {
     };
 
     update(deltaTime) {
-        const v = Matter.Body.getVelocity(this.body)
-        this.dx = v.x
-        this.dy = v.y
+        const v = Matter.Body.getVelocity(this.body);
+        this.dx = v.x;
+        this.dy = v.y;
         this.sprite.x = this.body.position.x - 65 / 2;
         this.sprite.y = this.body.position.y - 50 / 2;
 
         if (this.keySet.has("a") || this.keySet.has("ArrowLeft")) this.move(-1);
         if (this.keySet.has("d") || this.keySet.has("ArrowRight")) this.move(1);
 
-        if (this.direction <0) this.sprite.scale.x = -1
-        if (this.direction>0) this.sprite.scale.x = 1
+        if (this.direction <0) this.sprite.scale.x = -1;
+        if (this.direction>=0) this.sprite.scale.x = 1;
         // if (Math.abs(this.dx<1)) this.changeAnimation("breath")
     };
 
@@ -56,12 +56,12 @@ export class Hero extends Container {
             console.log(this.jumpIndex)
             ++this.jumpIndex;
             this.platform = null;
-            Matter.Body.setVelocity(this.body, { x: this.dx, y: -10 });
+            Matter.Body.setVelocity(this.body, { x: this.dx, y: -13 });
         }
 
-        const v = Matter.Body.getVelocity(this.body)
-        this.dy = v.y
-        this.changeAnimation("jump")
+        const v = Matter.Body.getVelocity(this.body);
+        this.dy = v.y;
+        this.changeAnimation("jump");
     }
 
     land(e) {
@@ -76,14 +76,12 @@ export class Hero extends Container {
         }
     }
 
-    move(direction) {
+    move(direction=0) {
         let vector = Matter.Body.getVelocity(this.body)
         vector.x = direction > 0 ? Math.min(vector.x + 1, this.maxSpeed) : Math.max(vector.x - 1, -this.maxSpeed)
-        Matter.Body.setVelocity(this.body,
-            vector
-        );
-        const v = Matter.Body.getVelocity(this.body)
-        this.dx = v.x
+        Matter.Body.setVelocity(this.body, vector);
+        const v = Matter.Body.getVelocity(this.body);
+        // this.dx = v.x
 
         this.changeAnimation("run")
     this.direction = direction
@@ -131,12 +129,10 @@ this.changeAnimation("intro", "launch")
         speech.y = this.sprite.y-30
         })
         .onComplete(()=> {
-            new Tween(speech).to({x:this.sprite.x + 700 * this.direction, y: this.sprite.y +10}, 600).onComplete(()=> {
+            new Tween(speech).to({x:this.sprite.x + 300 * this.direction, y: this.sprite.y +5}, 320).onComplete(()=> {
             new Tween(speech).to({alpha:0}, 200).start().onComplete(()=>{
 this.charging = false;
-                    })
-
-                    ;
+                    });
             }).start()
         })
             .start();
@@ -157,11 +153,18 @@ this.charging = false;
         this.changeAnimation("breath")
             }
         }
-        else if (this.curAnimation === "run" ||name==="launch" ) {
-        this.sprite.onComplete = ()=> {
+        else if ( name==="launch" ) {
+        this.sprite.onLoop = ()=> {
         this.changeAnimation("breath")
             }
         }
+        else if (this.curAnimation === "run" ) {
+        this.sprite.onLoop = () => {
+                if (!this.keySet.has("a") &&! this.keySet.has("d")
+                && !this.keySet.has("ArrowLeft") &&
+                !this.keySet.has("ArrowRight")) this.changeAnimation("breath");
+            };
+        };
 
         this.sprite.x = temp.x
         this.sprite.y = temp.y
