@@ -25,7 +25,7 @@ export class LoaderScene extends Container {
         this.initializeLoader().then(() => {
             setTimeout(()=>{
             this.gameLoaded()
-            }, 0)
+            }, 4500)
         })
     }
     update(deltaTime) {
