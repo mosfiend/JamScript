@@ -1,4 +1,4 @@
-import {Container, Graphics, Sprite, Text} from 'pixi.js'
+import {Container, Sprite, Text} from 'pixi.js'
 import Matter from 'matter-js';
 import { Manager } from "../manager.js"
 import { Background } from '../game/Background.js';
@@ -22,7 +22,6 @@ export class Stage extends Container {
             this.theme = Manager.song1;
             this.theme.volume = 0.4;
             this.theme.play();
-            // this.song = sound.add("spice", "/assets/images/ITS.mp3")
             /// ELEMENTS
             this.bg = new Background(this.screenHeight);
             this.groundHeight = this.bg.groundHeight;

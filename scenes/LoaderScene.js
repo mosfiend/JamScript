@@ -1,9 +1,8 @@
-import {Assets, Container, Graphics, Text} from "pixi.js"
+import {Assets, Container, Text} from "pixi.js"
 import { Manager } from "../manager";
 import { manifest } from "../assets/assets"
 import { StartMenu } from "./StartMenu"
 import { Sound } from '@pixi/sound'
-import { Stage } from "./Stage";
 
 export class LoaderScene extends Container {
     constructor() {
